@@ -15,7 +15,7 @@
       <br>AWS
       <input type="checkbox" ng-model="myVar3">
       <br>
-      Select your class
+      Select your class:
       <input type="radio" ng-model="msem" value="sem1">Semester 1
       <input type="radio" ng-model="msem" value="sem2">Semester 2
       <input type="radio" ng-model="msem" value="sem3">Semester 3
@@ -25,7 +25,25 @@
       <h1 ng-if="myVar1">Welcome to python</h1>
       <h1 ng-if="myVar2">Welcome to machine learning</h1>
       <h1 ng-if="myVar3">Welcome to AWS</h1>
-
+      <div ng-switch="msem">
+        
+        <div ng-switch-when="sem1">
+          <h1>Sem 1</h1>
+          <p>you have selected sem 1.</p>
+        </div>
+        <div ng-switch-when="sem2">
+          <h1>Sem 2</h1>
+          <p>you have selected sem 2.</p>
+        </div>
+        <div ng-switch-when="sem3">
+          <h1>Sem 3</h1>
+          <p>you have selected sem 3.</p>
+        </div>
+        <div ng-switch-when="sem4">
+          <h1>Sem 4</h1>
+          <p>you have selected sem 4.</p>
+        </div>
+      </div>
 
 
 </body>
