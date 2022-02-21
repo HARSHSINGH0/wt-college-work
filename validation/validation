@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input.ng-invalid{
+            background-color: rgb(220, 127, 20);
+        }
+        input.ng-valid{
+            background-color:rgb(16, 153, 233);
+        }
+    </style>
+</head>
+<body ng-app="">
+    <form name="myForm">
+        NAME:<input type="text" name="fname" ng-model="fname" required placeholder="Enter your name here">
+        <span ng-show="myForm.fname.$touched && myForm.fname.$invalid">Name is required</span>
+        <br>
+        
+        EMAIL:<input type="email" name="email" ng-model="email" required placeholder="Enter your email here">
+        <span ng-show="myForm.email.$touched && myForm.email.$invalid">Email is required</span>
+        <br>
+        AGE:<input type="number" name="age" ng-model="age" required placeholder="Enter your age here">
+        <span ng-show="myForm.age.$touched && myForm.age.$invalid">Age is required</span>
+    </form>
+        
+
+    
+</body>
+</html>
