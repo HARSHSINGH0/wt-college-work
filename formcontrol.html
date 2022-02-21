@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="">
+    <form>
+        Check to show a header:
+        <input type="checkbox" ng-model="myVar">
+    </form>
+    <h1 ng-if="myVar">Resume</h1>
+    <input type="text" ng-init="Avinash Gume" ng-model="fullname">
+    name:{{fullname}}
+    <br>
+    Qualification
+    <select ng-model ="mqual">
+        <option value=" "></option>
+        <option value="BSC IT">BSC IT</option>
+        <option value="BCom">BCom</option>
+        <option value="BCA">BCA</option> 
+        <option value="BE">BE</option>
+    </select>
+        <div ng-switch="mqual">
+            <div ng-switch-when="BSC IT">
+            <h2>Your qualification is {{mqual}}</h2>
+            </div>
+            
+            <div ng-switch-when="BCom">
+            <h2>Your qualification is {{mqual}}</h2>
+            </div>
+            <div ng-switch-when="BCA">
+            <h2>Your qualification is {{mqual}}</h2>
+            </body>
+            <div ng-switch-when="BE">
+            <h2>Your qualification is {{mqual}}</h2>
+            </div>
+        </div>
+        <br>
+        Gender
+        <input type="radio" ng-model="mgender" value="M">Male
+        <input type="radio" ng-model="mgender" value="F">Female
+        <input type="radio" ng-model="mgender" value="O">Others
+
+        <div ng-switch="mgender">
+            <div ng-switch-when="M"><h2>You are {{mgender}}</h2></div>
+            <div ng-switch-when="F"><h2>You are {{mgender}}</h2></div>
+            <div ng-switch-when="O"><h2>You are {{mgender}}</h2></div>
+        </div>
+</body>
+</html>
