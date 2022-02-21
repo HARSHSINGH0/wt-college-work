@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 </head>
 
-<body ng-app="">
+<body ng-app="myApp" ng-controller="ChangeCtrl">
     <form>
       First Name:<input type="text" ng-model="firstname">
       <h1>Name: {{firstname}}</h1><br>
@@ -78,7 +78,16 @@
           <p>you have selected B.COM .</p>
         </div>
       </div>
-
+      <script>
+        var app=angular.module('myApp',[]);
+        app.controller('ChangeCtrl',function($scope){
+          $scope.firstname="Harsh";
+          $scope.change=function()
+          {
+            $scope.firstname="Singh";
+          }
+        });
+      </script>
 
 </body>
 </html>
