@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="">
+    <form>
+      First Name:<input type="text" ng-model="firstname">
+      <h1>Name: {{firstname}}</h1><br>
+      Preference<br>
+      python<input type="checkbox" ng-model="myVar1">
+      <br>Machine Learning
+      <input type="checkbox" ng-model="myVar2">
+      <br>AWS
+      <input type="checkbox" ng-model="myVar3">
+      <br>
+      Select your class
+      <input type="radio" ng-model="msem" value="sem1">Semester 1
+      <input type="radio" ng-model="msem" value="sem2">Semester 2
+      <input type="radio" ng-model="msem" value="sem3">Semester 3
+      <input type="radio" ng-model="msem" value="sem4">Semester 4
+
+    </form>
+      <h1 ng-if="myVar1">Welcome to python</h1>
+      <h1 ng-if="myVar2">Welcome to machine learning</h1>
+      <h1 ng-if="myVar3">Welcome to AWS</h1>
+
+
+
+</body>
+</html>
+<!-- Pick a color:
+      <input type="radio" ng-model="myVarc" value="red">red
+      <input type="radio" ng-model="myVarc" value="orange">orange
+      <input type="radio" ng-model="myVarc" value="green">green -->
+      <!-- <p ng-show="mVar1"><h1>Welcome to Python</h1></p>
+      <p ng-show="mVar2"><h1>Welcome to Machine Learning</h1></p>
+      <p ng-show="mVar3"><h1>Welcome to Amazon Web Services</h1></p> -->
