@@ -45,6 +45,40 @@
         </div>
       </div>
 
+      <!--  -->
+      Select your Degree:
+      <!-- <input type="radio" ng-model="deg" value="bca">BCA
+      <input type="radio" ng-model="deg" value="bsc_cs">BSc CS 
+      <input type="radio" ng-model="deg" value="bsc_it">BSc IT 
+      <input type="radio" ng-model="deg" value="bcom">B.COM -->
+      <select ng-model="deg">
+        <option value="bca">BCA</option>
+        <option value="bsc_cs">BSc CS</option>
+        <option value="bsc_it">BSc It</option>
+        <option value="bcom">B.Com</option>
+      </select>
+      <button ng-click="change()">Change Name</button>
+    </form>
+      <div ng-switch="deg">
+        
+        <div ng-switch-when="bca">
+          <h1>BCA</h1>
+          <p>you have selected bca .</p>
+        </div>
+        <div ng-switch-when="bsc_cs">
+          <h1>BSc CS</h1>
+          <p>you have selected BSc CS .</p>
+        </div>
+        <div ng-switch-when="bsc_it">
+          <h1>BSc IT </h1>
+          <p>you have selected BSc IT .</p>
+        </div>
+        <div ng-switch-when="bcom">
+          <h1>B.COM</h1>
+          <p>you have selected B.COM .</p>
+        </div>
+      </div>
+
 
 </body>
 </html>
