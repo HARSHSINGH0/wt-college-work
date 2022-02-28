@@ -5,33 +5,50 @@
 
 <body ng-app="myApp">
 
-<p><a href="#/!">Main</a></p>
+<p><a href="#/!main">Main</a></p>
 
 <a href="#!red">Red</a>
 <a href="#!green">Green</a>
 <a href="#!blue">Blue</a>
 
 <div ng-view></div>
+<!-- ng view is the container -->
 
 <script>
 var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "main.html"
+        templateUrl : "main.html",
+        controller:"mainCtrl"
+        
     })
     .when("/red", {
-        templateUrl : "red.html"
+        templateUrl : "red.html",
+        controller:"redCtrl"
     })
     .when("/green", {
-        templateUrl : "green.html"
+        templateUrl : "green.html",
+        controller:"greenCtrl"
     })
     .when("/blue", {
-        templateUrl : "blue.html"
+        templateUrl : "blue.html",
+        controller:"blueCtrl"
     });
 });
+app.controller("mainCtrl",function($scope){
+    $scope.msg="Hello Main Color"
+})
+app.controller("redCtrl",function($scope){
+    $scope.msg="Hello Red Color"
+})
+app.controller("greenCtrl",function($scope){
+    $scope.msg="Hello Green Color"
+})
+app.controller("blueCtrl",function($scope){
+    $scope.msg="Hello Blue Color"
+})
 </script>
 
-<p>Click on the links to navigate to "red.htm", "green.htm", "blue.htm", or back to "main.htm"</p>
 </body>
 </html>
