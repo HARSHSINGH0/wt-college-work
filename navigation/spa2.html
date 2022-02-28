@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+<body ng-app="myApp">
+
+<p><a href="#/!">Nothing</a></p>
+
+<a href="#!sem1">Sem1</a>
+<a href="#!sem2">Sem2</a>
+
+<div ng-view></div>
+
+<script>
+var app = angular.module("myApp", ["ngRoute"]);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/sem1", {
+        template : "<h1>Semester 1</h1><p>ADBMS</p>"
+    })
+    .when("/sem2", {
+        template : "<h1>Semester 2</h1><p>IOT.</p>"
+    })
+    .otherwise( {
+        template : "<h1>Nothing</h1><p>Nothing has been selected</p>"
+    });
+});
+</script>
+
+</body>
+</html>
